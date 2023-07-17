@@ -2,13 +2,13 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import { toast } from 'react-toastify'
 import axios from 'axios'
 const initialState = {
-  order: {},
-  isLoading: {},
+  order: [],
+  isLoading: false,
 }
 
 export const createOrder = createAsyncThunk('order/createOrder', async (values, thunkAPI) => {
   try {
-    const resp = await axios.post('http://localhost:3000/api/order/createOrder', { ...values })
+    const resp = await axios.post('https://topup-backend.vercel.app/api/order/createOrder', { ...values })
     return resp.data
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response.data.msg)
@@ -25,6 +25,7 @@ const orderSlice = createSlice({
         state.isLoading = true
       })
       .addCase(createOrder.fulfilled, (state, { payload }) => {
+        toast.success('Order Berhasil Dibuat mohon ditunggu beberapa saat')
         state.isLoading = false
         state.order = payload
       })
