@@ -34,7 +34,7 @@ const Form = ({ currency, game }) => {
       dispatch(createOrder(values))
       setTimeout(() => {
         dispatch(openModal())
-      }, 1000)
+      }, 10000)
     }
   }
 
