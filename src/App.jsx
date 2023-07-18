@@ -1,4 +1,4 @@
-import { Dashboard, Error, Landing, Login, Register, FormUpdate } from './page/'
+import { Error, Landing, Login, Register, FormUpdate, Invoice } from './page/'
 import { Route, Routes } from 'react-router-dom'
 import { Aov, Valorant, FF, Gi, Mlbb, PUBG } from './page/voucher/index'
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <Route path="/voucher/mobile-legend" element={<Mlbb />} />
       <Route path="/voucher/pubg" element={<PUBG />} />
       <Route path="/voucher/valorant" element={<Valorant />} />
-
+      <Route path="/voucher/invoice" element={<Invoice />} />
       <Route path="*" element={<Error />} />
     </Routes>
   )

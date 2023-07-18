@@ -21,12 +21,13 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Provider store={store}>
         <ToastContainer
-          toastClassName={({ type }) => contextClass[type || 'default'] + ' relative flex p-1 min-h-10 rounded-md justify-between overflow-hidden cursor-pointer'}
+          toastClassName={({ type }) => contextClass[type || 'default'] + ' relative flex p-1 min-h-10 rounded-md justify-center overflow-hidden cursor-pointer'}
           bodyClassName={() => 'text-base text-center uppercase text-black font-bold p-3'}
           position="top-center"
+          autoClose={10000}
         />
         <App />
       </Provider>
     </BrowserRouter>
-  </>,
+  </>
 )

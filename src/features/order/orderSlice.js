@@ -25,7 +25,6 @@ const orderSlice = createSlice({
         state.isLoading = true
       })
       .addCase(createOrder.fulfilled, (state, { payload }) => {
-        toast.success('Order Berhasil Dibuat mohon ditunggu beberapa saat')
         state.isLoading = false
         state.order = payload
       })

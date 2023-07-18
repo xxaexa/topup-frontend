@@ -32,6 +32,7 @@ const Form = ({ currency, game }) => {
       return
     } else {
       dispatch(createOrder(values))
+      toast.success('Order Berhasil Dibuat mohon ditunggu beberapa saat')
       setTimeout(() => {
         dispatch(openModal())
       }, 10000)
