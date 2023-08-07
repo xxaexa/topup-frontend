@@ -1,4 +1,4 @@
-import { Error, Landing, Login, Register, FormUpdate, Invoice } from './page/'
+import { Error, Landing, Invoice } from './page/'
 import { Route, Routes } from 'react-router-dom'
 import { Aov, Valorant, FF, Gi, Mlbb, PUBG } from './page/voucher/index'
 function App() {
